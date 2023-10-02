@@ -20,6 +20,27 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
+.text-primary-2 {
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-title {
+    color: #0B0223;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.section-description {
+    color: #534C64;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
 .btn-primary {
     font-family: Work Sans;
     font-size: 1.25rem;
@@ -36,12 +57,14 @@ body {
 /* header styles */
 /* nav related styles */
 .nav-container {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: #FFF;
     box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
-    padding: 30px 240px 30px;
 }
 
 .nav-title {
@@ -60,6 +83,7 @@ body {
     gap: 20px;
     justify-content: center;
     align-items: center;
+    margin: 30px 240px;
 }
 
 .nav-menu {
@@ -67,6 +91,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 30px;
+    margin-right: 240px;
 }
 
 .nav-menu a {
@@ -144,29 +169,80 @@ body {
     background: #4EC5F7;
 }
 
-.banner-img-container> img{
+.banner-img-container>img {
     width: 100%;
+}
+
+/* online games styles */
+main {
+    padding-right: 240px;
+    padding-left: 240px;
+}
+
+.online-games-container {
+    margin-top: 130px;
+    margin-bottom: 130px;
+}
+
+.online-games-intro {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.games-card-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+.card>img {
+    width: 340px;
+}
+
+.card>.caption {
+    margin-top: 20px;
+    color: #534C64;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.card-img-3, .watch-now{
+    position: relative;
+}
+
+.watch-now{
+    top: -100px;
+}
+
+.card-img-3{
+    bottom: -20px;
 }
 
 /* responsive media query */
 /* mobile devices */
 @media screen and (max-width: 576px) {
-    .nav-container{
+    .nav-container {
         flex-direction: column;
         padding-left: 40px;
         padding-right: 40px;
+        position: fixed;
     }
 
-    .banner-container{
+    .banner-container {
         flex-direction: column-reverse;
         padding-left: 40px;
         padding-right: 40px;
-        background-image: ;
+        background-size: 100%;
         background-position: bottom;
     }
 
-    .banner-content,
-    .banner-img-container{
+    .banner-content {
         padding-top: 130px;
+    }
+
+    .banner-img-container {
+        padding-top: 200px;
+
     }
 }
