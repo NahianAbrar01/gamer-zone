@@ -39,6 +39,7 @@ body {
     color: #534C64;
     font-size: 1.2rem;
     font-weight: 400;
+    margin-top: 15px;
 }
 
 .btn-primary {
@@ -52,12 +53,12 @@ body {
     padding: 20px 40px;
     align-items: flex-start;
     margin-top: 40px;
+    cursor: pointer;
 }
 
 /* header styles */
 /* nav related styles */
 .nav-container {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     display: flex;
@@ -207,32 +208,28 @@ main {
     font-weight: 500;
 }
 
-.card-img-3, .watch-now{
-    position: relative;
-}
-
-.watch-now{
-    top: -100px;
-}
-
-.card-img-3{
-    bottom: -20px;
-}
 
 /* responsive media query */
 /* mobile devices */
 @media screen and (max-width: 576px) {
-    .nav-container {
+    .nav-container,
+    .games-card-container {
         flex-direction: column;
+    }
+
+    .nav-menu{
+        padding-bottom: 20px;
+        gap: 30px;
+        margin-right: 0px;
+    }
+
+    .banner-container, main{
         padding-left: 40px;
         padding-right: 40px;
-        position: fixed;
     }
 
     .banner-container {
         flex-direction: column-reverse;
-        padding-left: 40px;
-        padding-right: 40px;
         background-size: 100%;
         background-position: bottom;
     }
@@ -241,8 +238,8 @@ main {
         padding-top: 130px;
     }
 
-    .banner-img-container {
-        padding-top: 200px;
-
+    .games-card-container{
+        max-width: 340px;
+        margin: 0 auto;
     }
 }
